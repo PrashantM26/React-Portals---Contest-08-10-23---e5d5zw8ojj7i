@@ -4,7 +4,7 @@ import  ReactDOM  from 'react-dom';
 //complete this function using portals
 const PortalTextArea=()=>{
     return (
-        <div>
+        <div id="portal-textfield">
             <textarea id="textarea" value={inputText}></textarea>
         </div>
     )
