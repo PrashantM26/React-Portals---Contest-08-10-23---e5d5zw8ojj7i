@@ -5,7 +5,10 @@ import PortalTextArea from './PortalTextArea.js';
 
 //complete the function 
 const App = () => {
-
+  
+  const [inputText, setInputText] = useState("");
+  const handleButtonClick = () => {
+    const textArea = document.getElementById("textarea");
 
 
   return (
