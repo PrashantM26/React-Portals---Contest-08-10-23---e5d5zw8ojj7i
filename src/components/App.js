@@ -1,4 +1,5 @@
 import React ,{useState, useRef} from 'react'
+import {createPortal} from "react-dom";
 import '../styles/App.css';
 import PortalButton from './PortalButton.js';
 import PortalTextArea from './PortalTextArea.js';
@@ -16,8 +17,8 @@ const App = () => {
     
     <div id="main">
       <input id="input" value={inputText} onChange={(e) => setInputText(e.target.value)}></input><br/>
-      createPortal(<PortalButton buttonclick={handleButtonClick} /><br/>
-      <PortalTextArea value={}/>
+      {createPortal(<PortalButton buttonclick={handleButtonClick} />, document.getElementById("portal-button"))}<br/>
+      {createPortal(<PortalTextArea value={inputText}/>, document.getElementById("portal-textfield"))}
     </div>
   )
 }
