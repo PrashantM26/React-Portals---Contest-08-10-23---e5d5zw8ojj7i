@@ -8,9 +8,12 @@ import PortalTextArea from './PortalTextArea.js';
 const App = () => {
   
   const [inputText, setInputText] = useState("");
+  const [textArea, setTextArea] = useState("");
   const handleButtonClick = () => {
-    const textArea = document.getElementById("textarea");
-    textArea.innerText += inputText;
+    //const textArea = document.getElementById("textarea");
+    setTextArea(inputText);
+    //textArea.innerText += inputText;
+    setInputText("");
   }
   
   return (
@@ -18,7 +21,7 @@ const App = () => {
     <div id="main">
       <input id="input" value={inputText} onChange={(e) => setInputText(e.target.value)}></input><br/>
       {createPortal(<PortalButton buttonclick={handleButtonClick} />, document.getElementById("portal-button"))}<br/>
-      {createPortal(<PortalTextArea value={inputText}/>, document.getElementById("portal-textfield"))}
+      {createPortal(<PortalTextArea value={textArea}/>, document.getElementById("portal-textfield"))}
     </div>
   )
 }
