@@ -5,7 +5,7 @@ import  ReactDOM  from 'react-dom';
 const PortalTextArea=()=>{
     return (
         <div id="portal-textfield">
-            <textarea id="textarea" value={inputText}></textarea>
+            <textarea id="textarea" value={text} onChange={(e) => setText(e.target.value)}></textarea>
         </div>
     )
 }
