@@ -5,7 +5,7 @@ import  ReactDOM  from 'react-dom';
 const PortalTextArea=()=>{
     return (
         <div>
-            <textarea id="textarea" value={}></textarea>
+            <textarea id="textarea" value={inputText}></textarea>
         </div>
     )
 }
