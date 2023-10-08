@@ -4,7 +4,7 @@ import  ReactDOM  from 'react-dom';
 //complete this function using portals
 const PortalButton=()=>{
     return (
-        <div>
+        <div id="portal-button">
             <button id="button" onClick={handleButtonClick}>Click</button>
         </div>
         
